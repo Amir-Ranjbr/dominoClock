@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Staatliches", cursive;
+  gap: 2rem;
+
+  background: #131313;
+  color: #f0f0f0;
+}
+h1 {
+  font-size: 3rem;
+}
+h1 > span {
+  font-size: 1rem;
+  color: #505050;
+}
+.dominos-container {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  font-size: 1vw;
+}
+.colon,
+.ampm {
+  font-size: 5em;
+}
+.domino {
+  width: 12em;
+  background: linear-gradient(to bottom right, #272727, #111111);
+  box-shadow: inset 0.1em 0.1em 0.2em #ffffff33,
+    inset -0.1em -0.1em 0.2em #000000e6, 0.1em 0.1em 2em #000000;
+  display: grid;
+  border-radius: 1em;
+  gap: 2em;
+  padding: 2em;
+}
+.domino::before {
+  content: "";
+  height: 0.25em;
+  background: #ffffff;
+  grid-row: 2;
+  border-radius: 0.25em;
+}
+.domino .part {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.part span {
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0.1em 0.1em 0.1em #000000b3,
+    inset -0.1em -0.1em 0.1em #ffffff1a;
+  background-image: linear-gradient(transparent 50%, #f0f0f0 50%);
+  background-size: 100% 220%;
+  background-position: 0 0%;
+  transition: background-position 0.25s ease;
+}
+
+.part span.active {
+  background-position: 0 -90%;
+}
