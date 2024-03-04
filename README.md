@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Domino Clock](image/desktop.png)
+![Domino Clock](image/laptop.png)
 <br>
 
 </div>
